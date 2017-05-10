@@ -1,0 +1,111 @@
+.portfolio-section
+  min-height: 100vh
+  width: 100%
+  margin: 50px 0
+  display: flex
+  justify-content: center
+  align-items: center
+  flex-direction: column
+  overflow: hidden
+
+  // background-size: cover
+  // background-position: center
+  // background: url('/app/assets/images/adventure-info-section.jpg')
+
+  h2
+    font-size: 35px
+    margin-bottom: 40px
+    letter-spacing: 4px
+
+  .works
+    width: 1000px
+    display: flex
+    flex-wrap: wrap
+    position: relative
+
+    .work-box
+      border: 1px solid #dadada
+      width: calc(100% * (1/2) - 10px - 10px)
+      height: 300px
+      margin: 10px
+      position: relative
+      overflow: hidden
+      cursor: pointer
+
+      img
+        position: absolute
+        top: 0
+        left: 0
+        width: 100%
+        height: 250px
+        transition: 0.5s all
+
+      figcaption
+        background: #FFFFFF
+        width: 100%
+        padding: 20px
+        position: absolute
+        top: 80%
+        left: 0
+        height: 300px
+        transition: 0.5s all
+
+        h3
+          font-size: 20px
+
+        .hr
+          width: 0%
+          background: transparent
+          height: 5px
+          margin: 20px 0
+          transition: 0.7s all
+
+        address, time, p, h3
+          display: block
+          margin-bottom: 20px
+
+      &:hover
+        img
+          top: -80%
+
+        figcaption
+          top: 0
+
+          .hr
+            width: 100%
+            background: #e21e30
+
+
+@media (max-width: 1100px)
+  .portfolio-section
+    .works
+      width: 100%
+      padding: 20px
+
+@media (max-width: 768px)
+  .portfolio-section
+    .works
+      .work-box
+
+        img
+          top: -80%      
+        figcaption
+          top: 0
+
+          .hr
+            height: 3px
+            width: 100%
+            background: #e21e30
+
+@media (max-width: 600px)
+  .portfolio-section
+
+    h2
+      font-size: 26px
+    .works
+      .work-box
+        width: 100%
+
+
+          
+

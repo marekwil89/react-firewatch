@@ -1,0 +1,67 @@
+.shake 
+  animation: shake 0.5s 
+          
+.access-denied
+  animation: access-denied 0.5s
+
+.open-left-door
+  animation: open-left 0.6s forwards
+  
+.open-right-door
+  animation: open-right 0.5s forwards
+
+@keyframes rotate-shape
+  0%
+    transform: rotate(40deg) skew(20deg)
+
+  50%
+    transform: rotate(45deg) skew(0deg)
+  100%
+    transform: rotate(40deg) skew(20deg)
+
+@keyframes shake 
+  from, to 
+    transform: translate3d(0, 0, 0)
+
+  10%, 30%, 50%, 70%, 90% 
+    transform: translate3d(-5px, 0, 0)
+
+  20%, 40%, 60%, 80% 
+    transform: translate3d(5px, 0, 0)
+
+@keyframes access-denied
+  0%
+    transform: rotate(0deg)
+  33%
+    transform: rotate(-20deg)
+  77%
+    transform: rotate(20deg)
+  100%
+    transform: rotate(0deg)
+  
+@keyframes open-left
+  100%
+    transform: translateX(-100%)
+
+@keyframes open-right
+  100%
+    transform: translateX(110%)
+
+@keyframes show
+  0%
+    display: none
+    opacity: 0
+  1%
+    display: block
+    opacity: 0
+  100%
+    transform: translateY(0)
+    opacity: 1
+
+@keyframes icon-move-down
+  0%
+    transform: translateY(0px)
+  50%
+    transform: translateY(30px)
+  100%
+    transform: translateY(0px)

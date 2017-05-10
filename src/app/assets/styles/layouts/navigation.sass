@@ -1,0 +1,85 @@
+.side-menu
+  width: 100%
+  min-height: 100vh
+  z-index: 888
+  position: fixed
+  top: 0
+  min-height: 100vh
+  right: -100%
+  background: rgba(#191919, 0.0)
+  transition: 0.3s all linear
+  display: flex
+  justify-content: center
+  align-items: center
+  flex-direction: column
+
+  h2
+    color: #FFFFFF
+    font-size: 35px
+
+  .link
+    margin: 20px
+    display: block
+    color: #f1f1f1
+    font-weight: 700
+    font-size: 35px
+    text-transform: uppercase
+    letter-spacing: 1.3px
+
+    &:hover
+      color: #e21e30
+
+  &.opened
+    background: rgba(#191919, 1)
+    right: 0
+
+.side-menu-trigger
+  z-index: 889
+  width: 100%
+  cursor: pointer
+  width: 40px
+  height: 40px
+  margin: 10px 20px
+  border: none
+  border-top: 5px solid #191919
+  position: fixed
+  top: 20px
+  right: 20px
+  background: transparent
+  transition: 0.3s all
+
+  &.opened
+    border-top: none
+    &:before
+      transform: rotate(-45deg) translate(-12.5px, 12.5px )
+      border-top: 5px solid #f1f1f1
+    &:after
+      transform: rotate(45deg) translate(-12.5px, -12.5px )
+      border-top: 5px solid #f1f1f1
+  
+  &:before
+    content: ''
+    position: absolute
+    top: 0px
+    left: 0px
+    width: 100%
+    border-top: 5px solid #191919
+    transform: translateY(12.5px)
+    transition: 0.3s all
+
+  &:after
+    content: ''
+    position: absolute
+    bottom: 0
+    left: 0
+    width: 100%
+    transform: translateY(0px)
+    border-top: 5px solid #191919
+    transition: 0.3s all
+
+@media (max-width: 500px)
+  .side-menu
+    left: 200%
+    &.opened
+      right: 0
+      left: 0

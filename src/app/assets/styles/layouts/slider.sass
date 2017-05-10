@@ -1,0 +1,89 @@
+.slider-section
+  display: flex
+  min-height: 100vh
+  margin: 50px 0
+  align-items: center
+  white-space: nowrap
+  justify-content: center
+  overflow: hidden
+  position: relative
+          
+  .slider-box
+    padding: 0
+    width: 1200px
+
+    .slide
+      display: none
+      padding: 100px
+      width: 100%
+      white-space: normal
+      transition: 0.7s all
+
+      &.active
+        display: block
+        animation: show 0.3s
+
+      .slide-wrap
+        display: flex
+    
+        aside
+          padding: 20px
+          width: 70%
+          position: relative
+          overflow: hidden
+          margin-right: 20px
+          
+          .hr
+            margin: 20px 0
+            background: #e21e30
+            height: 5px 
+            width: 40px
+
+          time, h3, h4
+            display: block
+            margin-bottom: 20px
+            font-weight: 700
+
+          h3
+            font-size: 30px
+
+          p
+            text-align: justify
+            font-weight: 300
+            line-height: 25px
+            color: #333333
+
+        figure
+          padding-top: 50px
+          width: 30%
+          
+          img
+            width: 100%
+
+@media (max-width: 1300px)
+  .slider-section
+            
+    .slider-box
+      width: 100%
+
+@media (max-width: 800px)
+  .slider-section
+    .slider-box
+      .slide
+        padding: 20px
+
+
+@media (max-width: 700px)
+  .slider-section
+    .slider-box
+      .slide
+
+        .slide-wrap
+          aside
+            width: 100%
+            margin-right: 0
+
+            h3
+              font-size: 25px
+          figure
+            display: none

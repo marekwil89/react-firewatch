@@ -1,0 +1,28 @@
+.separate-section
+  min-height: 200px
+  position: relative
+  overflow: hidden
+
+  .separate-box
+    position: absolute
+    background: #000000
+    z-index: 40
+    filter: blur(1.1px)
+    height: 200px
+    width: 120%
+    left: -20px
+    right: -20px
+
+    &.top
+      top: -80px
+
+    &.bottom
+      bottom: -80px
+
+    &.left
+      transform: rotate(-4deg)
+
+    &.right
+      transform: rotate(4deg)
+
+    

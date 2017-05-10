@@ -1,0 +1,76 @@
+.zoom-section
+  display: flex
+  justify-content: center
+  align-items: center
+  min-height: 100vh
+  margin: 50px 0
+
+  aside
+    width: 500px
+
+    p
+      font-size: 18px
+      line-height: 35px
+
+  .img-box
+    width: 500px
+    z-index: 1
+    height: 500px
+    margin-right: 100px
+    position: relative
+    background-size: cover
+    box-shadow: 3px 3px 40px 0px rgba(#999999,1)
+    border-radius: 5px
+    cursor: none
+
+    .map-overlay
+      z-index: -1
+      opacity: 0
+      position: absolute
+      top: 0
+      left: 0
+      width: 100%
+      height: 100%
+      transition: 0.3s all
+
+    &:hover
+      .map-overlay
+        z-index: 2
+        opacity: 1
+        background: rgba(#000000, 0.8)
+    
+    .zoom
+      border-radius: 5px
+      z-index: 99
+      box-shadow: 3px 3px 40px 0px rgba(#999999,1)
+      width: 250px
+      height: 250px
+      background-size: 400%
+      background-repeat: no-repeat
+      position: absolute
+      border: 1px solid #999999
+
+@media (max-width: 1200px)
+  .zoom-section
+    flex-direction: column
+    aside
+      padding: 20px
+      width: 700px
+      order: 1
+      p
+        line-height: 25px
+
+    .img-box
+      margin: 50px 0
+      order: 2
+
+@media (max-width: 720px)
+  .zoom-section
+    aside
+      width: 100%
+
+@media (max-width: 600px)
+  .zoom-section
+    min-height: 70vh
+    .img-box
+      display: none

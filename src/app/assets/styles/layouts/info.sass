@@ -1,0 +1,49 @@
+.info-section
+  min-height: 100vh
+  margin: 50px 0
+  display: flex
+  justify-content: center
+  align-items: center
+  overflow: hidden
+
+  article
+    width: 600px
+    position: relative
+    margin-right: 100px
+    padding: 20px
+
+    p
+      font-size: 18px
+      line-height: 35px
+
+  figure
+    width: 800px
+    padding: 20px
+
+    img
+      width: 100%
+      height: 100%
+      box-shadow: 3px 3px 40px 0px rgba(#999999,1)
+
+@media (max-width: 1600px)
+  .info-section
+    article
+      width: 45%
+      margin-right: 50px
+      p
+        line-height: 25px
+
+    figure
+      width: 55%
+
+@media (max-width: 1000px)
+  .info-section
+    article
+      width: 100%
+      margin-right: 0
+
+      p
+        line-height: 35px
+
+    figure
+      display: none

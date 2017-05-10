@@ -1,0 +1,90 @@
+.header-component
+  min-height: 100vh
+  position: relative
+  overflow: hidden
+  display: flex
+  justify-content: center
+  align-items: center
+  flex-direction: column
+
+  .img
+    width: 100%
+    position: absolute
+    background-repeat: no-repeat
+    background-size: cover
+    bottom: 0
+    
+    &.mist
+      background: url('http://www.pngmart.com/files/3/Mist-Transparent-Background.png')
+      min-height: 100vh
+      background-size: cover
+      z-index: 5
+
+    &.forest
+      background: url('http://www.lazylresort.com/images/forest.png')
+      z-index: 6
+      bottom: -100px
+      background-repeat: no-repeat
+      background-size: cover
+      height: 600px
+      bottom: -200px
+      
+    &.mountain
+      height: 900px
+      background: url('https://www.ourhealthvirginia.com/images/stateouline.png')
+      background-size: cover
+      z-index: 1
+
+    &.landscape
+      height: 750px
+      bottom: -250px
+      background: url('http://www.vanwalt.com/images/footer-tree-outline.png')
+      background-size: cover
+      z-index: 4
+
+    &.rocks
+      height: 540px
+      background: url('http://kitimatlngdigital.ca/images/rocky-mountains.png')
+      background-size: cover
+      z-index: 2
+
+  h1
+    padding: 20px
+    border: 10px solid 
+    text-transform: uppercase
+    font-size: 70px
+    letter-spacing: 3.5px
+    z-index: 50
+
+  .move-down
+    width: 100%
+    z-index: 99
+    text-align: center
+    position: absolute
+    bottom: 50px
+    left: 0
+    
+    .fa-chevron-down
+      transition: 0.3s all
+      font-size: 50px
+      color: #FFFFFF
+      cursor: pointer
+      animation: icon-move-down 1.5s infinite ease
+   
+@media (max-width: 600px)
+  .header-component
+    h1
+      margin: 20px
+      font-size: 50px
+
+@media (max-width: 400px)
+  .header-component
+    h1
+      font-size: 30px
+
+
+@media (max-height: 600px)
+  .header-component
+    h1
+      color: #F1F1F1
+      border: 10px solid #F1F1F1
