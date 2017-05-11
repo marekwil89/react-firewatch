@@ -33,7 +33,7 @@ var config = {
             },
             { 
                 test: /\.(png|jpg)$/,
-                include: path.join(__dirname, 'src'),
+                include: SRC_DIR,
                 loader: "url-loader"
             }
         ]
