@@ -8,7 +8,7 @@ var config = {
     output: {
         path: DIST_DIR + "/app",
         filename: "bundle.js",
-        publicPath: "/app/"
+        publicPath: "/app"
     },
     module: {
         loaders: [
@@ -33,7 +33,7 @@ var config = {
             },
             { 
                 test: /\.(png|jpg)$/,
-                include: SRC_DIR,
+                include: path.join(__dirname, 'src'),
                 loader: "url-loader"
             }
         ]
